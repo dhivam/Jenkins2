@@ -1,6 +1,6 @@
 pipeline {
     agent {
-        label "worker"
+        label "dockerworker"
     }
     stages {
         stage('Build') {
@@ -18,7 +18,10 @@ pipeline {
                 }
             }
         }
-
     }
-
+    post {
+        always {
+            deleteDir()
+        }
+    }
 }
