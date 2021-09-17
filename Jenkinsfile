@@ -1,2 +1,5 @@
 @Library('library-test@master') _
-deliveryPipeline()
+deliveryPipeline(
+text: "Jenkins1"
+agent: "worker2"
+)
